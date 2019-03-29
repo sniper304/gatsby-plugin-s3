@@ -131,3 +131,14 @@ Serverless will give you the added advantage of being able to add multiple AWS s
 - [See the recipe](recipes/with-serverless.md)  
 Bare bones implementation details on how to set up serverless & gatsby-plugin-s3
 - [See the `with-serverless` example](examples/with-serverless)  
+
+### Using Yandex S3 or any AWS supported services with gatsby-plugin-s3
+To use Yandex S3 or any supported AWS services you need only to change region & customAwsEndpointHostname params (provided by service) before deploy.
+Yandex example:
+```typescript
+{
+    bucketName: 'YOUR_BUCKET_NAME',
+    region: 'us-east-1',
+    customAwsEndpointHostname: 'storage.yandexcloud.net'
+};
+```
